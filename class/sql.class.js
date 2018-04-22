@@ -2,19 +2,19 @@ class Sql {
     constructor() {
     }
 
-    Init () {
+    static Init () {
 
     }
 
-    Insert (tab, rowname, rowval)  {
+    static Insert (tab, rowname, rowval)  {
         return `INSERT INTO ${tab}(${rowname}) VALUES(${rowval})`;
     }
 
-    Update () {
+    static Update () {
 
     }
 
-    Delete () {
+    static Delete () {
 
     }
 }
