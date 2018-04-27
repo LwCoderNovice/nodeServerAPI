@@ -1,0 +1,22 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+  form#registform(method="post", action="/users/register")
+    input#username(type="text", name="username")
+    input#password(type="password", name="password")
+    button(type="submit") Submit
+  form(method="post", action="/users/checkUsername")
+    input(type="text", name="username")
+    button(type="submit") Submit
+  block addtopic
+    h1 topictitle
+    p Add a new topic
+    form(action="/topic/publish", method="post", enctype="multipart/form-data")
+      input#content(type="text", name="content")
+      input(type="text", name="author")
+      input(type="text", name="createtime")
+      input(type="file", name="img")
+      input(type="file", name="img")
+      button(type="submit") Publish
